@@ -29,7 +29,7 @@ const SuggestedAccounts: NextPage<IProps> = ({ fetchAllUsers, allUsers }) => {
         {users?.slice(0, 6).map((user: IUser) => (
           <Link href={`/profile/${user._id}`} key={user._id}>
             <div className='flex gap-3 hover:bg-primary p-2 cursor-pointer font-semibold rounded'>
-              <div className='w-8 h-8'>
+              <div className='w-8 h-8 mb-16 lg:mb-2'>
                 <Image
                   width={34}
                   height={34}
