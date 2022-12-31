@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
-    ignoreBuildErrors:true
+    ignoreBuildErrors: true,
+
+    
   },
   reactStrictMode: true,
   images: {
@@ -9,7 +11,7 @@ const nextConfig = {
       'www.heartresearch.com.au',
       'cdn.pixabay.com',
       'lh3.googleusercontent.com',
-      'image.shutterstock.com'
+      'image.shutterstock.com',
     ],
   },
 }
