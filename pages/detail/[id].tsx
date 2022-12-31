@@ -108,11 +108,11 @@ const Detail = ({ postDetails }: IProps) => {
             <div className='absolute bottom-5 lg:bottom-10 right-5 lg:right-10  cursor-pointer'>
               {isVideoMuted ? (
                 <button onClick={() => setIsVideoMuted(false)}>
-                  <HiVolumeOff className='text-white text-3xl lg:text-4xl' />
+                  <HiVolumeOff className='text-red-600 text-3xl lg:text-4xl' />
                 </button>
               ) : (
                 <button onClick={() => setIsVideoMuted(true)}>
-                  <HiVolumeUp className='text-white text-3xl lg:text-4xl' />
+                  <HiVolumeUp className='text-red-600 text-3xl lg:text-4xl' />
                 </button>
               )}
             </div>
