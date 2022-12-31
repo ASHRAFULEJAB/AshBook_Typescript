@@ -35,6 +35,7 @@ const VideoCard: NextPage<IProps> = ({ post: { caption, postedBy, video, _id, li
       videoRef.current.muted = isVideoMuted;
     }
   }, [isVideoMuted]);
+ 
 
   if(!isShowingOnHome) {
     return (

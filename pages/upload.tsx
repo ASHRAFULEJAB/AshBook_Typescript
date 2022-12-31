@@ -21,9 +21,9 @@ const Upload = () => {
   const userProfile: any = useAuthStore((state) => state.userProfile);
   const router = useRouter();
 
-  // useEffect(() => {
-  //   if (!userProfile) router.push('/');
-  // }, [userProfile, router]);
+  useEffect(() => {
+    if (!userProfile) router.push('/');
+  }, [userProfile, router]);
 
   const uploadVideo = async (e: any) => {
     const selectedFile = e.target.files[0];

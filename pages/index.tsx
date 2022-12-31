@@ -1,4 +1,5 @@
-import axios from "axios"
+import React from 'react';
+import axios from 'axios';
 
 import VideoCard from '../components/VideoCard';
 import { BASE_URL } from '../utils';
@@ -21,23 +22,20 @@ const Home = ({ videos }: IProps) => {
   );
 };
 
-// export default function Home({ videos }) {
-//   console.log(videos);
-//   return (
-//     <>
-//        <h1 className="text-3xl font-bold underline">
-//       Hello world!
-//     </h1>
-//      </>
-//   )
-// }
-export const getServerSideProps = async () => {
-  const {data} = await axios.get(`http://localhost:3000/api/post`)
-  // console.log)
-  return {
-    props: {
-      videos:data
-    }
+export default Home;
+
+export const getServerSideProps = async ({
+  query: { topic },
+}: {
+  query: { topic: string };
+}) => {
+  let response = await axios.get(`${BASE_URL}/api/post`);
+
+  if(topic) {
+    response = await axios.get(`${BASE_URL}/api/discover/${topic}`);
   }
-}
-export default Home
+  
+  return {
+    props: { videos: response.data },
+  };
+};
