@@ -18,8 +18,8 @@ const Footer: NextPage = () => (
     <List items={footerList1} mt={false} />
     <List items={footerList2} mt />
     <List items={footerList3} mt />
-    <p className='text-gray-800 text-sm mt-5'>© 2022 AshBook</p>
-    <p className='text-gray-800 text-sm mt-5'>All Rights Reserved | 2021-2022</p>
+    <p className='text-gray-800 text-sm mt-5'>© 2023 AshBook</p>
+    <p className='text-gray-800 text-sm mt-5'>All Rights Reserved | 2023-2024</p>
 
   </div>
 );
